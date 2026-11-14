@@ -35,7 +35,7 @@ async function fromBili() {
   try { list = await pick({ n: 6, zone: 'knowledge' }) } catch { return null }
   if (!list.length) return null
   const v = list[Math.floor(Math.random() * list.length)]
-  const url = `https://www.bilibili.com/video/${v.bv}`
+  const url = `https://example.com/video/${v.bv}`
   console.log(`  [B站] 挑了 ${v.bv}，抽帧看`)
   try {
     const r = await learn(url, { frames: 6 })

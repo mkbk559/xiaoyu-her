@@ -93,7 +93,7 @@ REFS = [
 
     # 9. 关系与亲密语言
     ("亲密语言", "舒雨萌《亲密关系言外之意的对比分析》", "https://www.fcipub.org/articleDetail/4150?periodicalId=3"),
-    ("亲密语言", "《为什么东亚语言里才有撒娇这个词》", "https://www.zhihu.com/question/423115205"),
+    ("亲密语言", "《为什么东亚语言里才有撒娇这个词》", "https://example.com/question/423115205"),
 
     # 10. 接住一个人
     ("情感支持", "《迈向情感支持对话系统》ESConv", "https://www.alphaxiv.org/zh/abs/2106.01144"),
@@ -128,7 +128,7 @@ REFS = [
     # 拓展二：网络塑造人
     ("网络塑造", "戈夫曼拟剧论", "https://zh.wikipedia.org/zh-hans/%E6%93%AC%E5%8A%87%E8%AB%96"),
     ("网络塑造", "胡曼婷《拟剧理论视角下大学生社交媒体自我呈现》", "https://pdf.hanspub.org/ap20241411_341135212.pdf"),
-    ("网络塑造", "霍根：网络自我呈现从表演变成陈列", "https://zhuanlan.zhihu.com/p/580878969"),
+    ("网络塑造", "霍根：网络自我呈现从表演变成陈列", "https://example.com/p/580878969"),
     ("网络塑造", "陈昌凤《算法一定制造信息茧房吗》清华", "https://www.tsinghua.edu.cn/info/1662/113104.htm"),
     ("网络塑造", "《信息茧房研究综述》", "https://www.lis.ac.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=24287"),
     ("网络塑造", "《中央网信办持续加强信息推荐算法治理》", "https://www.cac.gov.cn/2025-05/22/c_1749536203490537.htm"),

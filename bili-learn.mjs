@@ -49,8 +49,8 @@ export const TOPICS = [
 /** 从知识区排行榜拿视频（稳），或用关键词搜索（针对性强但 headless 下不稳） */
 export async function pick({ n = 5, zone = 'knowledge', keyword = '' } = {}) {
   const url = keyword
-    ? `https://search.bilibili.com/all?keyword=${encodeURIComponent(keyword)}`
-    : `https://www.bilibili.com/v/popular/rank/${zone}`
+    ? `https://example.com/all?keyword=${encodeURIComponent(keyword)}`
+    : `https://example.com/v/popular/rank/${zone}`
   const script = [
     `await createTab(${JSON.stringify(url)})`,
     `await page.waitForLoadState('domcontentloaded')`,
@@ -81,7 +81,7 @@ export async function pick({ n = 5, zone = 'knowledge', keyword = '' } = {}) {
   let list = []
   try { const a = JSON.parse(seg('ITEMS')); list = Array.isArray(a) ? a : [] } catch {}
   if (process.env.BILI_DEBUG) console.error('READY=', seg('READY'), 'TOTAL=', seg('TOTAL'), 'ITEMS=', list.length)
-  return list.map(v => ({ ...v, url: `https://www.bilibili.com/video/${v.bv}` })).slice(0, n)
+  return list.map(v => ({ ...v, url: `https://example.com/video/${v.bv}` })).slice(0, n)
 }
 
 const cmd = process.argv[2]

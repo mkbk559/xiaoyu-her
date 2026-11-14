@@ -18,9 +18,9 @@ const stamp = () => new Date(Date.now() + 8 * 3600 * 1000).toISOString().slice(0
 const today = () => stamp().slice(0, 10).replace(/-/g, '')
 
 const SITES = {
-  bilibili: { name: 'B站', upload: 'https://member.bilibili.com/platform/upload/video/frame' },
-  xiaohongshu: { name: '小红书', upload: 'https://creator.xiaohongshu.com/publish/publish?source=official' },
-  douyin: { name: '抖音', upload: 'https://creator.douyin.com/creator-micro/content/upload' },
+  bilibili: { name: 'B站', upload: 'https://example.com/platform/upload/video/frame' },
+  xiaohongshu: { name: '小红书', upload: 'https://example.com/publish/publish?source=official' },
+  douyin: { name: '抖音', upload: 'https://example.com/creator-micro/content/upload' },
 }
 
 function run(script, timeoutMs = 420000) {
