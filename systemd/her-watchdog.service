@@ -1,0 +1,8 @@
+[Unit]
+Description=大肥鱼 watchdog 自检自愈（每5分钟）
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /opt/her/her-watchdog.sh
+TimeoutStartSec=120

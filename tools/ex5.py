@@ -1,0 +1,12 @@
+H="/opt/her"
+M=open(H+"/her-mind.mjs",encoding="utf-8").read().splitlines()
+print("== her-mind 1-60 ==")
+for i,x in enumerate(M[:60],1): print("%4d %s"%(i,x[:160]))
+print("== her-mind 255-300 ==")
+for i,x in enumerate(M[254:300],255): print("%4d %s"%(i,x[:160]))
+print("== her-mind 440-500 ==")
+for i,x in enumerate(M[439:500],440): print("%4d %s"%(i,x[:160]))
+print()
+W=open(H+"/her-world.mjs",encoding="utf-8").read().splitlines()
+print("== her-world 1-30 ==")
+for i,x in enumerate(W[:30],1): print("%4d %s"%(i,x[:160]))

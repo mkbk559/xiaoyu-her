@@ -1,0 +1,5 @@
+[Unit]
+Description=大肥鱼 免疫系统（回归检测/重启/回滚/告警）
+[Service]
+Type=oneshot
+ExecStart=/opt/her/.venv/bin/python /opt/her/her-immune.py

@@ -1,0 +1,12 @@
+[Unit]
+Description=大肥鱼 内核闭环（目标→计划→执行→反思）
+After=network.target aiji.service
+Wants=aiji.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/her
+ExecStart=/opt/node/bin/node /opt/her/her-mind.mjs tick
+TimeoutStartSec=2400
+StandardOutput=append:/var/log/her-mind.log
+StandardError=append:/var/log/her-mind.log

@@ -1,0 +1,24 @@
+[Unit]
+Description=大肥鱼 常驻生活循环（她的一天）
+After=network.target aiji.service agent2api.service
+Wants=aiji.service agent2api.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/her
+Environment=HER_DAY_LIMIT=1500
+Environment=HER_HOUR_LIMIT=80
+Environment=HER_LLM_TIMEOUT=240000
+Environment=PATH=/opt/node/bin:/usr/local/bin:/usr/bin:/bin
+Environment=EGO_LINUX_CHROME=/opt/ego/package/bin/ego-chrome-wrapper.sh
+Environment=EGO_LINUX_STATE_DIR=/opt/ego/state
+Environment=EGO_LINUX_HEADLESS=1
+ExecStart=/opt/node/bin/node /opt/her/day.mjs --loop 25
+Restart=always
+RestartSec=30
+StandardOutput=append:/var/log/her-life.log
+StandardError=append:/var/log/her-life.err
+
+[Install]
+WantedBy=multi-user.target

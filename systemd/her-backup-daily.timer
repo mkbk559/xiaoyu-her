@@ -1,0 +1,10 @@
+[Unit]
+Description=每天 03:00 打一份完整包（异地拉取用）
+
+[Timer]
+OnCalendar=*-*-* 03:00:00
+Persistent=true
+Unit=her-backup-daily.service
+
+[Install]
+WantedBy=timers.target

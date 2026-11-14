@@ -1,0 +1,7 @@
+[Unit]
+Description=每 30 分钟跑一次她的固定评测
+[Timer]
+OnCalendar=*:0/30
+Persistent=true
+[Install]
+WantedBy=timers.target

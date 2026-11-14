@@ -1,0 +1,16 @@
+[Unit]
+Description=大肥鱼 聊天服务
+After=network.target aiji.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/her
+ExecStart=/opt/node/bin/node /opt/her/chat-server.mjs 8788
+Restart=always
+RestartSec=5
+Environment=HER_DAY_LIMIT=3000
+Environment=HER_HOUR_LIMIT=600
+Environment=SHANGHAI_TZ=1
+
+[Install]
+WantedBy=multi-user.target

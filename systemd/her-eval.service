@@ -1,0 +1,5 @@
+[Unit]
+Description=大肥鱼 固定评测（只读）
+[Service]
+Type=oneshot
+ExecStart=/opt/node/bin/node /opt/her-eval/eval.mjs

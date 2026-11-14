@@ -1,0 +1,7 @@
+[Unit]
+Description=每 10 分钟跑一次免疫检查
+[Timer]
+OnCalendar=*:0/10
+Persistent=true
+[Install]
+WantedBy=timers.target

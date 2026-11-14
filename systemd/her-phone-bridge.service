@@ -1,0 +1,17 @@
+[Unit]
+Description=大肥鱼 手机桥（抖音会话 ↔ 她的脑子）
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/her
+ExecStart=/opt/her/.venv/bin/python /opt/her/phone-bridge3.py
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+StandardOutput=append:/opt/her/phone-bridge.log
+StandardError=append:/opt/her/phone-bridge.log
+
+[Install]
+WantedBy=multi-user.target

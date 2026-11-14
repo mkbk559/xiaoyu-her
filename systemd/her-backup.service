@@ -1,0 +1,10 @@
+[Unit]
+Description=她的备份（人格/记忆/状态多版本，B 为主后最高优先）
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/her
+ExecStart=/usr/bin/python3 /opt/her/her-backup.py --daily
+StandardOutput=append:/var/log/her-backup.log
+StandardError=append:/var/log/her-backup.log

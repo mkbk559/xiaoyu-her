@@ -1,0 +1,12 @@
+[Unit]
+Description=大肥鱼 watchdog 定时器（每5分钟）
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+AccuracySec=30s
+Persistent=true
+Unit=her-watchdog.service
+
+[Install]
+WantedBy=timers.target

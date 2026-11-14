@@ -1,0 +1,10 @@
+[Unit]
+Description=她的每日整包备份（03:00，供异地拉取）
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/her
+ExecStart=/usr/bin/python3 /opt/her/her-backup.py --daily
+StandardOutput=append:/var/log/her-backup.log
+StandardError=append:/var/log/her-backup.log

@@ -1,0 +1,12 @@
+[Unit]
+Description=大肥鱼 内核定时器（每 25 分钟走一步闭环）
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=25min
+AccuracySec=1min
+Persistent=true
+Unit=her-mind.service
+
+[Install]
+WantedBy=timers.target
