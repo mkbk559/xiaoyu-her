@@ -1,0 +1,7 @@
+{
+  "baseURL": "http://127.0.0.1:3065/v1",
+  "memoryBase": "http://127.0.0.1:8787/v1",
+  "apiKey": "PUT_YOUR_KEY_HERE",
+  "model": "aiji",
+  "visionModel": "glm-4.6v"
+}
